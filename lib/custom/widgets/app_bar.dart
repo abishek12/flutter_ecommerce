@@ -14,7 +14,7 @@ PreferredSizeWidget customAppBar(BuildContext context, title,
     actions: [
       IconButton(
         onPressed: () {},
-        icon: const Icon(Icons.notifications),
+        icon: const Icon(Icons.notifications_outlined),
       ),
       isCart!
           ? Container()
