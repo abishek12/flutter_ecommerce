@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProfileImageWidget extends StatelessWidget {
@@ -20,12 +21,13 @@ class ProfileImageWidget extends StatelessWidget {
             child: Container(
               width: 50,
               height: 50,
-              decoration: const BoxDecoration(
-                color: Colors.white,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.surface,
                 shape: BoxShape.circle,
               ),
               child: const Icon(
-                Icons.camera_alt_outlined,
+                CupertinoIcons.camera,
+                size: 28,
               ),
             ),
           ),
