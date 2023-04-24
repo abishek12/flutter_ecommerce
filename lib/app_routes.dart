@@ -5,6 +5,7 @@ import 'home/screen/home_screen.dart';
 import 'main/screen/main_screen.dart';
 import 'product/screen/product_screen.dart';
 import 'profile/screen/profile_screen.dart';
+import 'setting/screen/setting_screen.dart';
 import 'splash/screen/splash_screen.dart';
 
 final appRoutes = GoRouter(
@@ -38,6 +39,11 @@ final appRoutes = GoRouter(
       path: '/cart',
       name: 'cartScreen',
       builder: (context, state) => const CartScreen(),
+    ),
+    GoRoute(
+      path: '/setting',
+      name: 'settingScreen',
+      builder: (context, state) => const SettingScreen(),
     ),
   ],
 );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../widgets/profile_image_widget.dart';
 import '../widgets/profile_list_tile.dart';
@@ -35,7 +36,7 @@ class ProfileScreen extends StatelessWidget {
         ProfileListTileWidget(
           title: "Setting",
           leading: Icons.settings,
-          onTap: () {},
+          onTap: () => context.pushNamed('settingScreen'),
         ),
         ProfileListTileWidget(
           title: "Help Center",

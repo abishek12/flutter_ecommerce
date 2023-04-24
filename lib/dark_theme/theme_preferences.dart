@@ -21,7 +21,7 @@ class ThemeNotifier with ChangeNotifier {
   }
 
   Future<void> toggleTheme(value) async {
-    _prefs!.setString(key, value);
+    _prefs!.setBool(key, value);
     notifyListeners();
   }
 
