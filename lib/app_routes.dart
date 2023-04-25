@@ -1,5 +1,7 @@
 import 'package:go_router/go_router.dart';
 
+import 'authentication/screen/login_screen.dart';
+import 'authentication/screen/register_screen.dart';
 import 'cart/screen/cart_screen.dart';
 import 'home/screen/home_screen.dart';
 import 'main/screen/main_screen.dart';
@@ -44,6 +46,16 @@ final appRoutes = GoRouter(
       path: '/setting',
       name: 'settingScreen',
       builder: (context, state) => const SettingScreen(),
+    ),
+    GoRoute(
+      path: '/login',
+      name: 'loginScreen',
+      builder: (context, state) => const LoginScreen(),
+    ),
+    GoRoute(
+      path: '/register',
+      name: 'registerScreen',
+      builder: (context, state) => const RegisterScreen(),
     ),
   ],
 );

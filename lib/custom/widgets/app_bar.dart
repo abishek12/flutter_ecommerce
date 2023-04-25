@@ -3,8 +3,12 @@ import 'package:go_router/go_router.dart';
 
 import 'app_text.dart';
 
-PreferredSizeWidget customAppBar(BuildContext context, title,
-    {bool? isCart = false}) {
+PreferredSizeWidget customAppBar(
+  BuildContext context,
+  title, {
+  bool? isCart = false,
+  bool? isNotification = false,
+}) {
   return AppBar(
     title: AppText(
       title: '$title',
@@ -12,11 +16,13 @@ PreferredSizeWidget customAppBar(BuildContext context, title,
     ),
     centerTitle: true,
     actions: [
-      IconButton(
-        onPressed: () {},
-        icon: const Icon(Icons.notifications_outlined),
-      ),
       isCart!
+          ? Container()
+          : IconButton(
+              onPressed: () => context.pushNamed('cartScreen'),
+              icon: const Icon(Icons.notifications_outlined),
+            ),
+      isNotification!
           ? Container()
           : IconButton(
               onPressed: () => context.pushNamed('cartScreen'),

@@ -44,9 +44,9 @@ class ProfileScreen extends StatelessWidget {
           onTap: () {},
         ),
         ProfileListTileWidget(
-          title: "Logout",
+          title: "Sign In",
           leading: Icons.logout,
-          onTap: () {},
+          onTap: () => context.pushNamed('loginScreen'),
         ),
       ],
     );
